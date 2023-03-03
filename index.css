@@ -1,5 +1,9 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
 .projeto {
-  width: 300px;
+  width: 600px;
   position: relative;
 }
 
@@ -14,10 +18,20 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.25);
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 36px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.projeto .overlay:hover {
+  opacity: 1;
+  cursor: pointer;
 }
