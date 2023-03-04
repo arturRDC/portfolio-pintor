@@ -2,8 +2,48 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.grid-projetos {
+  display: grid;
+  grid-template-areas:
+    'rio rio casa'
+    'rio rio padrao'
+    'passaro arvore padrao'
+    'garota ondas ondas'
+    'garota ondas ondas'
+    'navios navios flores'
+    'navios navios flores';
+}
+
+#rio {
+  grid-area: rio;
+}
+
+#casa {
+  grid-area: casa;
+}
+#padrao {
+  grid-area: padrao;
+}
+#passaro {
+  grid-area: passaro;
+}
+#arvore {
+  grid-area: arvore;
+}
+#garota {
+  grid-area: garota;
+}
+#ondas {
+  grid-area: ondas;
+}
+#flores {
+  grid-area: flores;
+}
+#navios {
+  grid-area: navios;
+}
+
 .projeto {
-  width: 600px;
   position: relative;
 }
 
