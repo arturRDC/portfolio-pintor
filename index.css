@@ -2,6 +2,39 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.container {
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 64px 0;
+}
+
+.navbar .esquerda {
+  font-size: 32px;
+  font-weight: bold;
+}
+.navbar .direita {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .direita img {
+  width: 24px;
+  height: 24px;
+}
+.navbar .direita a {
+  text-decoration: none;
+  color: black;
+}
+.navbar .direita a:hover {
+  text-decoration: underline;
+}
+
 .grid-projetos {
   display: grid;
   grid-template-areas:
@@ -13,8 +46,6 @@ body {
     'navios navios flores'
     'navios navios flores';
   gap: 16px;
-  max-width: 90%;
-  margin: 0 auto;
 }
 
 #rio {
@@ -83,7 +114,16 @@ body {
   cursor: pointer;
 }
 
+.footer {
+  text-align: center;
+  padding: 48px;
+}
+
 @media only screen and (max-width: 1100px) {
+  .container {
+    max-width: 100%;
+    padding: 0 16px;
+  }
   .grid-projetos {
     grid-template-areas:
       'rio rio'
@@ -92,7 +132,6 @@ body {
       'ondas ondas'
       'garota navios'
       'flores flores';
-    max-width: 100%;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -106,7 +145,6 @@ body {
       'garota garota'
       'navios navios'
       'flores flores';
-    max-width: 100%;
   }
   .projeto .overlay {
     font-size: 24px;
