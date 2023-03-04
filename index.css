@@ -12,6 +12,9 @@ body {
     'garota ondas ondas'
     'navios navios flores'
     'navios navios flores';
+  gap: 16px;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 #rio {
@@ -53,6 +56,10 @@ body {
   object-fit: cover;
 }
 
+.overlay.branco {
+  color: white;
+}
+
 .projeto .overlay {
   margin: 0;
   position: absolute;
@@ -74,4 +81,34 @@ body {
 .projeto .overlay:hover {
   opacity: 1;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1100px) {
+  .grid-projetos {
+    grid-template-areas:
+      'rio rio'
+      'casa padrao'
+      'passaro arvore'
+      'ondas ondas'
+      'garota navios'
+      'flores flores';
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .grid-projetos {
+    grid-template-areas:
+      'rio rio'
+      'casa casa'
+      'padrao padrao'
+      'passaro arvore'
+      'ondas ondas'
+      'garota garota'
+      'navios navios'
+      'flores flores';
+    max-width: 100%;
+  }
+  .projeto .overlay {
+    font-size: 24px;
+  }
 }
