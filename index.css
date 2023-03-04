@@ -8,8 +8,10 @@ body {
 }
 
 .navbar {
+  background-color: white;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 64px 0;
 }
 
@@ -33,6 +35,25 @@ body {
 }
 .navbar .direita a:hover {
   text-decoration: underline;
+}
+
+.navbar .hamburguer {
+  height: 50px;
+  width: 50px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar .bar1,
+.navbar .bar2,
+.navbar .bar3 {
+  background-color: black;
+  height: 4px;
+  width: 36px;
+  border-radius: 10px;
+  margin: 3px;
 }
 
 .grid-projetos {
@@ -135,6 +156,20 @@ body {
   }
 }
 @media only screen and (max-width: 768px) {
+  .navbar {
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    padding: 16px 24px;
+    box-sizing: border-box;
+  }
+
+  .navbar .hamburguer {
+    display: flex;
+  }
   .grid-projetos {
     grid-template-areas:
       'rio rio'
@@ -145,8 +180,12 @@ body {
       'garota garota'
       'navios navios'
       'flores flores';
+    margin-top: 70px;
   }
   .projeto .overlay {
     font-size: 24px;
+  }
+  .navbar .direita {
+    display: none;
   }
 }
