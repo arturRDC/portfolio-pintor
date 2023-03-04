@@ -46,6 +46,44 @@ body {
   align-items: center;
 }
 
+.navbar .hamburguer:hover {
+  cursor: pointer;
+}
+
+.mobile-nav {
+  width: 80px;
+  background-color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  padding: 16px;
+  top: 0;
+  right: -160px;
+  z-index: 2;
+  transition: transform 0.5s;
+}
+
+.open-mobile-nav {
+  transform: translateX(-160px);
+}
+
+.mobile-nav a {
+  text-decoration: none;
+  color: black;
+  margin: 16px 0;
+}
+.mobile-nav a:hover {
+  text-decoration: underline;
+}
+
+.mobile-nav img {
+  width: 24px;
+  height: 24px;
+}
+
 .navbar .bar1,
 .navbar .bar2,
 .navbar .bar3 {
@@ -188,4 +226,45 @@ body {
   .navbar .direita {
     display: none;
   }
+}
+
+@keyframes fadeBar2 {
+  from {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  to {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+}
+@keyframes rotateBar1 {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(45deg) translate(4px, 10px);
+  }
+}
+
+@keyframes rotateBar3 {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-45deg) translate(4px, -10px);
+  }
+}
+
+.animateBar1 {
+  animation: rotateBar1 0.7s;
+  animation-fill-mode: forwards;
+}
+.animateBar2 {
+  animation: fadeBar2 0.7s;
+  animation-fill-mode: forwards;
+}
+.animateBar3 {
+  animation: rotateBar3 0.7s;
+  animation-fill-mode: forwards;
 }
